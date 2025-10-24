@@ -14,7 +14,7 @@ export default function UploadForm() {
     formData.append("resume", resume);
     formData.append("job_description", jobDesc);
 
-    const response = await fetch("http://127.0.0.1:5000/analyze", {
+    const response = await fetch("https://ai-job-application-assistant-backend.onrender.com/analyze", {
       method: "POST",
       body: formData, // No headers needed for multipart
     });
