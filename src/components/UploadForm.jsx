@@ -14,10 +14,13 @@ export default function UploadForm() {
     formData.append("resume", resume);
     formData.append("job_description", jobDesc);
 
-    const response = await fetch("https://ai-job-application-assistant-backend.onrender.com/analyze", {
-      method: "POST",
-      body: formData, // No headers needed for multipart
-    });
+    const response = await fetch(
+      "https://ai-job-application-assistant-backend.onrender.com/analyze",
+      {
+        method: "POST",
+        body: formData, // No headers needed for multipart
+      }
+    );
     const data = await response.json();
 
     setResult(data);
